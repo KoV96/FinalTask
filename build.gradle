@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'com.epam.ua.java.project'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    junitVersion = '5.7.1'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compileOnly('javax.servlet:javax.servlet-api:4.0.1')
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+
+    implementation 'log4j:log4j:1.2.17'
+    implementation 'jstl:jstl:1.2'
+    implementation 'javax.el:javax.el-api:3.0.1-b06'
+    implementation 'mysql:mysql-connector-java:8.0.24'
+}
+
+test {
+    useJUnitPlatform()
+}

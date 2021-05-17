@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Context>
+    <Recource
+        driverClassName="mysql:mysql-connector-java:8.0.24"
+        maxActive="4"
+        maxIdle="2"
+        maxWait="5000"
+        name="jdbc/Exhibitions"
+        username="root"
+        password="1111"
+        type="javax.sql.DataSource"
+        url="jdbc:mysql://localhost/myproject"
+        validationQuery="SELECT 1">
+    </Recource>
+</Context>
